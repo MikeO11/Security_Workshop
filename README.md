@@ -10,10 +10,8 @@
 * Burp Suite Community - https://portswigger.net/burp/communitydownload
 
 ## Firefox Setup
-(Pick one)
 
-
-<details><summary>Option 1 - Use FoxyProxy</summary>
+<details><summary>Change Firefox network Settings</summary>
 <p>
 1. Open Firefox's Preferences
 
@@ -34,7 +32,7 @@
 
 </p>
 </details>
-
+Foxy Proxy can also be used - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
 ## Docker Setup
 Run the following in a terminal
 
