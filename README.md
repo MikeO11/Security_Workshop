@@ -230,8 +230,9 @@ view the request
 <p>
 Change request from:
 
-`{"UserId":16,"captchaId":14,"captcha":"21","comment":"test","rating":1}
-(change the userid)`
+`{"UserId":16,"captchaId":14,"captcha":"21","comment":"test","rating":1}`
+
+(change the userid)
 
 `{"UserId":2,"captchaId":14,"captcha":"21","comment":"test","rating":1}`
 </p>
