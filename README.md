@@ -98,11 +98,14 @@ The application is vulnerable to injection attacks (see OWASP Top 10: A1). Data 
 
 
 **Lessons Learned**
+
 User input should always be subject to a sanitizing or validation process on the server side before being processed. Because this case deals with an SQL injection, input data should be adjusted server side by interpretable SQL symbols and instructions. Established functions should be used for this not in-house developments (e.g. self-generated RegEx), because this cannot ensure that all cases have been taken into consideration.
 
-**Prevention **
+**Prevention**
 
 Use Prepared statements instead of dynamic SQL
+
+- https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html#remediation
 
 - https://en.wikipedia.org/wiki/Prepared_statement
 
@@ -115,7 +118,7 @@ https://nakedsecurity.sophos.com/2018/02/19/hackers-sentenced-for-sql-injections
 </details>
 
 ------------
-##### Perform a DOM XSS attack with (EDIT ME)
+##### Perform a DOM XSS attack with <iframe src="javascript:alert(`xss`)">
 Attack Page: http://localhost.:3000/#/search
 Tools: None
 <details><summary>Hint</summary>
@@ -126,7 +129,7 @@ The code needs to to be pasted into an input field
 
 <details><summary>Answer</summary>
 <p>
-Click search and paste (EDIT ME) in search field
+Click search and paste `<iframe src="javascript:alert(`xss`)">` in search field
 
 Press Enter/Search
 </p>
@@ -145,7 +148,7 @@ The application is vulnerable for DOM XSS because user input is returned 1:1 by 
 
 The primary rule that you must follow to prevent DOM XSS is: sanitize all untrusted data, even if it is only used in client-side scripts. If you have to use user input on your page, always use it in the text context, never as HTML tags or any other potential code.
 
-Avoid methods such as document.innerHTML and instead use safer functions, for example, document.innerText and document.textContent. If you can, entirely avoid using user input, especially if it affects DOM elements such as the document.url, the document.location, or the document.referrer.
+Avoid methods such as `document.innerHTML` and instead use safer functions, for example, `document.innerText` and `document.textContent`. If you can, entirely avoid using user input, especially if it affects DOM elements such as the `document.url`, the `document.location`, or the `document.referrer`.
 
 Also, keep in mind that DOM XSS and other types of XSS are not mutually exclusive. Your application can be vulnerable to both reflected/stored XSS and DOM XSS. The good news is that if user input is handled properly at the foundation level (e.g. your framework), you should be able to mitigate all XSS vulnerabilities.'
 
@@ -162,7 +165,7 @@ https://www.acunetix.com/blog/web-security-zone/how-to-prevent-dom-based-cross-s
 
 ##### Give a devastating zero-star feedback to the store. 
 Requirements:
-- Use the admin account (perfrom the SQLi) - http://localhost.:3000/#/register
+- Use the admin account (perfrom the SQLi)
 - Attack page page: http://localhost.:3000/#/contact
 - Tools: Burp (turn intercept on)
 
@@ -189,6 +192,7 @@ TO (rating was changed from 1 to 0)
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Lessons Learned:**
 
 The user rating is not being checked on the backend. It should be checking for a rating between 1-5.
