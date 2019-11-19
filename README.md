@@ -38,7 +38,7 @@
 ## Docker Setup
 Run the following in a terminal
 
-`docker pull bkimminich/juice-shop`
+`docker pull bkimminich/juice-shop` <br/>
 `docker run --rm -p 3000:3000 bkimminich/juice-shop`
 
 Using Firefox, browse to http://localhost.:3000 (on macOS and Windows browse to http://192.168.99.100:3000 if you are using docker-machine instead of the native docker installation) **don't forget the '.' after local host** – This will force the localhost to use the same proxy settings as one would with an internet connection/adapter
