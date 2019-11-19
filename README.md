@@ -24,7 +24,9 @@
 </p>
 </details>
 Foxy Proxy can also be used - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
+
 ## Docker Setup
+
 Run the following in a terminal 
 
 `docker pull bkimminich/juice-shop` <br/>
