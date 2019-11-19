@@ -351,6 +351,7 @@ Authorization Tab
 
 </p>
 </details>
+
 ------------
 
 ##### View another user's shopping basket
