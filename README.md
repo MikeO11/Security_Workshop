@@ -14,27 +14,18 @@
 <details><summary>Change Firefox network Settings</summary>
 <p>
 1. Open Firefox's Preferences
-
-
-4. Search 'proxy' and change to settings to the following:
-
+2. Search 'proxy' and change to settings to the following:
 - HTTP Proxy: 127.0.0.1
-
 - port 8080
-
 - check 'Use this proxy server for all protocols'
-
-13. Open burp → Select Temp project → Next → Start Burp
-
-15. In Burp, click → Proxy → Intercept
-
-17. In the Intercept section, turn Intercept off by clicking the button
-
+3. Open burp → Select Temp project → Next → Start Burp
+4. In Burp, click → Proxy → Intercept
+5. In the Intercept section, turn Intercept off by clicking the button
 </p>
 </details>
 Foxy Proxy can also be used - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
 ## Docker Setup
-Run the following in a terminal
+Run the following in a terminal 
 
 `docker pull bkimminich/juice-shop` <br/>
 `docker run --rm -p 3000:3000 bkimminich/juice-shop`
