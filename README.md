@@ -175,8 +175,11 @@ Requirements:
 <details><summary>Hint</summary>
 <p>
 1. Navigate to the contact page
+ 
 2. Open Burp and turn 'Intercept' to ON
+
 3. view the request
+
 </p>
 </details>
 
