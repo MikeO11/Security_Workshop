@@ -73,8 +73,6 @@ SQL injection cheetsheet: https://pentestlab.blog/2012/12/24/sql-injection-authe
 
 `' or 1=1;--`
 
- 
-
 Logout and login as Bender
 
 UN` ' or 1=1 and email like('%bender%');--`
@@ -242,50 +240,110 @@ https://krebsonsecurity.com/2018/04/panerabread-com-leaks-millions-of-customer-r
 
 ------------
 
-##### Give a devastating zero-star feedback to the store. 
+##### Place an order that makes you rich
 
-Attack Page: http://localhost.:3000/#/search
-Tools: None
+Attack Page: Follow the purchase flow (add an item to the basket)
+Tools: Burp
 <details><summary>Hint</summary>
 <p>
+1. Open Burp and turn ‘Intercept’ to ON
+2. add an item(s) to your basket 
+3. View the requests
+NOTE: this is a bit tricky – it has to do with how many you are buying… or how many they are giving you
 
 </p>
 </details>
 
 <details><summary>Answer</summary>
 <p>
+Change the request from
 
+`{"ProductId":24,"BasketId":"6","quantity":10}`
+to
+`{"ProductId":24,"BasketId":"6","quantity":-100}`
+click forward and check your basket
 </p>
 </details>
 
 <details><summary>More Info</summary>
 <p>
+**Prevention**
 
+Validate the the quality is a reasonable positive number
+
+**Story**
+
+Shuttle company
 </p>
 </details>
 
+Try The Challenge again with postman
+<details><summary>Postman</summary>
+<p>
+1.Log in as any user.
+2. Put at least one item into your shopping basket.
+3. Note that reducing the quantity of a basket item below 1 is not possible via the UI
+4. When changing the quantity via the UI, you will notice PUT requests to http://localhost:3000/api/BasketItems/{id} in the 5. Network tab of your DevTools
+5. Memorize the `{id}` of any item in your basket
+6. Copy your `Authorization` header from any HTTP request submitted via browser.
+7. Submit a `PUT` request to http://localhost:3000/api/BasketItems/{id} replacing `{id}` with the memorized number from 5. and with:
+`{"quantity": -100}` as body,
 
+`application/json` as `Content-Type`
+
+and `Bearer ?` as `Authorization` header, replacing the `?` with the token you copied from the browser.
+Dev Tools View
+
+(EDIT ME PIC)
+
+Postman
+
+Authorization Tab
+
+
+</p>
+</details>
 ------------
 
-##### Give a devastating zero-star feedback to the store. 
+##### View another user's shopping basket
 
-Attack Page: http://localhost.:3000/#/search
-Tools: None
+1. Add a few items to your basket 
+
+2. go to http://localhost.:3000/#/basket 
+
+
 <details><summary>Hint</summary>
 <p>
+Check out the storage tab
 
 </p>
 </details>
 
 <details><summary>Answer</summary>
 <p>
-
+in ‘Session Storage’ change the ‘bid’ value to a lower number (if this were a real app you could also change it to a higher number)
 </p>
 </details>
 
 <details><summary>More Info</summary>
 <p>
+**Lessons Learned**
 
+The user does have a valid account but should not be able to access another users basket
+
+“Insecure Direct Object References occur when an application provides direct access to objects based on user-supplied input. As a result of this vulnerability attackers can bypass authorization and access resources in the system directly, for example database records or files.
+
+-https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
+
+**Prevention**
+
+The application should perform an access control check to ensure the user is authorized for the request object or service
+
+**News**
+
+https://krebsonsecurity.com/2018/04/panerabread-com-leaks-millions-of-customer-records/
+
+“some of the customer records include unique identifiers that increment by one for each new record, making it potentially simple for someone to scrape all available customer accounts. The format of the database also lets anyone search for customers via a variety of data points, including by phone number.”
 </p>
 </details>
 
