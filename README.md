@@ -288,9 +288,13 @@ NOTE: this is a bit tricky – it has to do with how many you are buying… or h
 Change the request from
 
 `{"ProductId":24,"BasketId":"6","quantity":10}`
+
 to
+
 `{"ProductId":24,"BasketId":"6","quantity":-100}`
+
 click forward and check your basket
+
 </p>
 </details>
 
@@ -310,8 +314,11 @@ Try The Challenge again with postman
 <details><summary>Postman</summary>
 <p>
 1.Log in as any user.
+ 
 2. Put at least one item into your shopping basket.
+
 3. Note that reducing the quantity of a basket item below 1 is not possible via the UI
+
 4. When changing the quantity via the UI, you will notice PUT requests to http://localhost:3000/api/BasketItems/{id} in the 5. Network tab of your DevTools
 5. Memorize the `{id}` of any item in your basket
 6. Copy your `Authorization` header from any HTTP request submitted via browser.
