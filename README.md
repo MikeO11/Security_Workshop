@@ -30,7 +30,7 @@
 5. In the Intercept section, turn Intercept off by clicking the button
 </p>
 </details>
-Foxy Proxy can also be used - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
+Foxy Proxy can also be used instead of editing the network settings - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
 
 ## Docker Setup
 
@@ -65,15 +65,17 @@ SQL injection cheetsheet: https://pentestlab.blog/2012/12/24/sql-injection-authe
 
 <details><summary>Answer</summary>
 <p>
-`admin' or '1'='1'--`
+Possible answers
 
-`' or 1=1/*`
+admin' or '1'='1'--
 
-`' or 1=1;--`
+' or 1=1/*
+
+' or 1=1;--
 
 Logout and login as Bender
 
-UN` ' or 1=1 and email like('%bender%');--`
+UN: ' or 1=1 and email like('%bender%');--
 
 PW: Anything will work
 </p>
@@ -81,6 +83,7 @@ PW: Anything will work
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Explanation**
 
 The application is vulnerable to injection attacks (see OWASP Top 10: A1). Data entered by the user is integrated 1:1 in an SQL command that is otherwise constant. The statement can then be amended/extended as appropriate. The Administrator is the first to appear in the selection list and is therefore logged on.
@@ -123,6 +126,7 @@ Press Enter/Search
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Explanation**
 
 The application is vulnerable for DOM XSS because user input is returned 1:1 by the application just as the user entered it.
@@ -215,6 +219,7 @@ Change request from:
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Lessons Learned**
 
 The user does have a valid account but should not be able to access another users information.
@@ -325,6 +330,7 @@ in ‘Session Storage’ change the ‘bid’ value to a lower number (if this w
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Lessons Learned**
 
 The user does have a valid account but should not be able to access another users basket
