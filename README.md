@@ -122,6 +122,7 @@ https://nakedsecurity.sophos.com/2018/02/19/hackers-sentenced-for-sql-injections
 ------------
 ##### Perform a DOM XSS attack with <iframe src="javascript:alert(`xss`)">
 Attack Page: http://localhost.:3000/#/search
+ 
 Tools: None
 <details><summary>Hint</summary>
 <p>
