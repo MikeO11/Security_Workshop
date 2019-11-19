@@ -16,6 +16,7 @@
 <details><summary>Option 1 - Use FoxyProxy</summary>
 <p>
 
+![image](https://user-images.githubusercontent.com/40209642/69169586-d826c800-0ab5-11ea-94df-35483161338c.png)
 
 
 </p>
