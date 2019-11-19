@@ -13,7 +13,8 @@
 
 <details><summary>Change Firefox network Settings</summary>
 <p>
-1. Open Firefox's Preferences
+1. Open Firefox's Preferences 
+ 
  ![image](https://user-images.githubusercontent.com/40209642/69169586-d826c800-0ab5-11ea-94df-35483161338c.png)
  
 2. Search 'proxy' and change to settings to the following:
@@ -23,6 +24,9 @@
 - port 8080
 
 - check 'Use this proxy server for all protocols'
+
+![image](https://user-images.githubusercontent.com/40209642/69174413-0230b800-0abf-11ea-99c4-6d7294394dd0.png)
+
 
 3. Open burp → Select Temp project → Next → Start Burp
 
