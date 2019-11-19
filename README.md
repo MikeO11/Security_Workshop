@@ -148,3 +148,145 @@ https://www.acunetix.com/blog/web-security-zone/how-to-prevent-dom-based-cross-s
 "Hackers exploit cross-site scripting vulnerability in WordPress plugin to attack Mailgun site” https://www.computing.co.uk/ctg/news/3074027/hackers-exploit-cross-site-scripting-vulnerability-in-wordpress-plugin-to-attack-mailgun-site
 </p>
 </details>
+
+
+------------
+
+##### Give a devastating zero-star feedback to the store. 
+Requirements:
+- Use the admin account (perfrom the SQLi) - http://localhost.:3000/#/register
+- Attack page page: http://localhost.:3000/#/contact
+- Tools: Burp (turn intercept on)
+
+<details><summary>Hint</summary>
+<p>
+1. Navigate to the contact page
+2. Open Burp and turn 'Intercept' to ON
+3. view the request
+</p>
+</details>
+
+<details><summary>Answer</summary>
+<p>
+Change request from:
+
+`{"UserId":1,"captchaId":21,"captcha":"9","comment":"this juice is grossssss","rating":1}`
+
+TO (rating was changed from 1 to 0)
+
+`{"UserId":1,"captchaId":21,"captcha":"9","comment":"this juice is grossssss","rating":0}`
+ 
+</p>
+</details>
+
+<details><summary>More Info</summary>
+<p>
+**Lessons Learned:**
+
+The user rating is not being checked on the backend. It should be checking for a rating between 1-5.
+</p>
+</details>
+
+------------
+
+##### Post some feedback in another users name
+
+Requirements
+- login to the admin account using SQLi
+Attack Page:  http://localhost.:3000/#/contact
+Tools: Burp (turn intercept on)
+
+<details><summary>Hint</summary>
+<p>
+Navigate to the contact page
+
+Open Burp and turn 'Intercept' to ON
+
+view the request
+</p>
+</details>
+
+<details><summary>Answer</summary>
+<p>
+Change request from:
+
+`{"UserId":16,"captchaId":14,"captcha":"21","comment":"test","rating":1}
+(change the userid)`
+
+`{"UserId":2,"captchaId":14,"captcha":"21","comment":"test","rating":1}`
+</p>
+</details>
+
+<details><summary>More Info</summary>
+<p>
+**Lessons Learned**
+
+The user does have a valid account but should not be able to access another users information.
+
+"Insecure Direct Object References occur when an application provides direct access to objects based on user-supplied input. As a result of this vulnerability attackers can bypass authorization and access resources in the system directly, for example database records or files.
+
+https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References_(OTG-AUTHZ-004)
+
+**Prevention:**
+
+The application should perform an access control check to ensure the user is authorized for the request object or service
+
+**News**
+
+https://krebsonsecurity.com/2018/04/panerabread-com-leaks-millions-of-customer-records/
+
+"some of the customer records include unique identifiers that increment by one for each new record, making it potentially simple for someone to scrape all available customer accounts. The format of the database also lets anyone search for customers via a variety of data points, including by phone number.”
+</p>
+</details>
+
+
+------------
+
+##### Give a devastating zero-star feedback to the store. 
+
+Attack Page: http://localhost.:3000/#/search
+Tools: None
+<details><summary>Hint</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>Answer</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>More Info</summary>
+<p>
+
+</p>
+</details>
+
+
+------------
+
+##### Give a devastating zero-star feedback to the store. 
+
+Attack Page: http://localhost.:3000/#/search
+Tools: None
+<details><summary>Hint</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>Answer</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>More Info</summary>
+<p>
+
+</p>
+</details>
+
+
