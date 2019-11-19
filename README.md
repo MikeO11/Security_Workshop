@@ -14,12 +14,19 @@
 <details><summary>Change Firefox network Settings</summary>
 <p>
 1. Open Firefox's Preferences
+ 
 2. Search 'proxy' and change to settings to the following:
+
 - HTTP Proxy: 127.0.0.1
+
 - port 8080
+
 - check 'Use this proxy server for all protocols'
+
 3. Open burp → Select Temp project → Next → Start Burp
+
 4. In Burp, click → Proxy → Intercept
+
 5. In the Intercept section, turn Intercept off by clicking the button
 </p>
 </details>
