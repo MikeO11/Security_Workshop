@@ -14,6 +14,7 @@
 <details><summary>Change Firefox network Settings</summary>
 <p>
 1. Open Firefox's Preferences
+ ![image](https://user-images.githubusercontent.com/40209642/69169586-d826c800-0ab5-11ea-94df-35483161338c.png)
  
 2. Search 'proxy' and change to settings to the following:
 
