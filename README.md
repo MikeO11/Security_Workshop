@@ -300,6 +300,7 @@ click forward and check your basket
 
 <details><summary>More Info</summary>
 <p>
+ 
 **Prevention**
 
 Validate the the quality is a reasonable positive number
@@ -320,9 +321,13 @@ Try The Challenge again with postman
 3. Note that reducing the quantity of a basket item below 1 is not possible via the UI
 
 4. When changing the quantity via the UI, you will notice PUT requests to http://localhost:3000/api/BasketItems/{id} in the 5. Network tab of your DevTools
+
 5. Memorize the `{id}` of any item in your basket
+
 6. Copy your `Authorization` header from any HTTP request submitted via browser.
+
 7. Submit a `PUT` request to http://localhost:3000/api/BasketItems/{id} replacing `{id}` with the memorized number from 5. and with:
+
 `{"quantity": -100}` as body,
 
 `application/json` as `Content-Type`
