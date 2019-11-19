@@ -132,7 +132,7 @@ The code needs to to be pasted into an input field
 
 <details><summary>Answer</summary>
 <p>
-Click search and paste <iframe src="javascript:alert(`xss`)">n search field
+Click search and paste <iframe src="javascript:alert(`xss`)"> in search field
 
 Press Enter/Search
 </p>
