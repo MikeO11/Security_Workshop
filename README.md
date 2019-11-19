@@ -16,11 +16,7 @@
 <details><summary>Option 1 - Use FoxyProxy</summary>
 <p>
 
-#### yes, even hidden code blocks!
 
-```python
-print("hello world!")
-```
-thanks!
+
 </p>
 </details>
