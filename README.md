@@ -33,6 +33,9 @@
 4. In Burp, click → Proxy → Intercept
 
 5. In the Intercept section, turn Intercept off by clicking the button
+
+![image](https://user-images.githubusercontent.com/40209642/69174547-46bc5380-0abf-11ea-87c6-d7069e0b9204.png)
+
 </p>
 </details>
 Foxy Proxy can also be used instead of editing the network settings - https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
