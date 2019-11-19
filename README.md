@@ -333,6 +333,7 @@ Try The Challenge again with postman
 `application/json` as `Content-Type`
 
 and `Bearer ?` as `Authorization` header, replacing the `?` with the token you copied from the browser.
+
 Dev Tools View
 
 ![image](https://user-images.githubusercontent.com/40209642/69178896-c6e6b700-0ac7-11ea-9888-906783d2c265.png)
