@@ -267,12 +267,17 @@ https://krebsonsecurity.com/2018/04/panerabread-com-leaks-millions-of-customer-r
 ##### Place an order that makes you rich
 
 Attack Page: Follow the purchase flow (add an item to the basket)
+
 Tools: Burp
+
 <details><summary>Hint</summary>
 <p>
 1. Open Burp and turn ‘Intercept’ to ON
+ 
 2. add an item(s) to your basket 
+
 3. View the requests
+
 NOTE: this is a bit tricky – it has to do with how many you are buying… or how many they are giving you
 
 </p>
