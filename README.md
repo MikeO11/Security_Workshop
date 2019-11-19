@@ -344,6 +344,8 @@ Postman
 
 
 Authorization Tab
+![image](https://user-images.githubusercontent.com/40209642/69179053-1331f700-0ac8-11ea-8d15-47d9a09c2607.png)
+
 
 
 </p>
