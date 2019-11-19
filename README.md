@@ -62,7 +62,9 @@ Using Firefox, browse to http://localhost.:3000 (on macOS and Windows browse to 
 
 ##### login as admin - SQL injection
 Attack Page: http://localhost.:3000/#/login
+
 Tools: None
+
 <details><summary>Hint</summary>
 <p>
 Use a SQL injection on the UN field any anything in the password field
