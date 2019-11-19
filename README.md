@@ -211,7 +211,9 @@ The user rating is not being checked on the backend. It should be checking for a
 
 Requirements
 - login to the admin account using SQLi
+
 Attack Page:  http://localhost.:3000/#/contact
+
 Tools: Burp (turn intercept on)
 
 <details><summary>Hint</summary>
